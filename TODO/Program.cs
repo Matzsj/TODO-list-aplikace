@@ -33,7 +33,7 @@
                     Console.WriteLine("---------------------");
                     Console.WriteLine("");
                 }
-
+                
                 if (ukol == "end")
                 {
                     ukoncit = true;
@@ -58,6 +58,8 @@
                     Console.WriteLine("---------------------");
                     Console.WriteLine("");
                 }
+
+                if
             }
 
         }
