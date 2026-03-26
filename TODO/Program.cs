@@ -16,7 +16,7 @@
 
                 Console.Write("Co je vas ukol: ");
                 string ukol = Console.ReadLine();
-                if (ukol != "show" && ukol != "end" && ukol != "clear" && ukol != "help")
+                if (ukol != "show" && ukol != "end" && ukol != "clear" && ukol != "help" && !ukol.StartsWith("delete "))
                 {
                     ukoly.Add(ukol);
                 }
@@ -59,7 +59,20 @@
                     Console.WriteLine("");
                 }
 
-                if
+                if (ukol != null && ukol.StartsWith("delete "))
+                {
+                    string smazani = ukol.Substring(7);
+
+                    if (ukoly.Remove(smazani))
+                    {
+                        Console.WriteLine("---------------------");
+                        Console.WriteLine($"Ukol '{smazani}' byl smazan.");
+                        Console.WriteLine("---------------------");
+                        Console.WriteLine("");
+
+
+                    }
+                }
             }
 
         }
